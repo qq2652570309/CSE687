@@ -1,0 +1,32 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Mon Jan 21 00:50:25 2019
+     Path: "C:\Users\wbai1\OneDrive\Desktop\CSE687\example\Cpp11-BlockingQueue\Cpp11-BlockingQueue"
+     Args: Cpp11-BlockingQueue.cpp, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1       7
+              public data: std :: mutex ioLock ; 
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+   Cpp11-BlockingQueue.cpp    function                               test      21      12       3
+   Cpp11-BlockingQueue.cpp    function                               main      35      52       3
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+   Cpp11-BlockingQueue.cpp    function                               main      35      52       3
+
+              public data: Cpp11-BlockingQueue.cpp : 18 - namespace Global Namespace
+                std :: mutex ioLock ; 
+
+
+    searched     2 dirs
+   processed     1 files
