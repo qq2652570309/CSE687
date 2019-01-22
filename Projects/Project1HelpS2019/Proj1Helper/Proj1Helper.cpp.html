@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+<head>
+  <style>
+    body {
+      padding: 15px 40px;
+      font-family: Consolas;
+      font-size: 1.25em;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <h3>Project #1 helper</h3>
+<pre>
+/////////////////////////////////////////////////////////////////////
+// Proj1Helper.cpp - will become webified                          //
+//                                                                 //
+// Jim Fawcett, CSE687 - Object Oriented Design, Spring 2019       //
+/////////////////////////////////////////////////////////////////////
+
+#include "Proj1Helper.h"
+
+X::X()
+{
+  str_ = "";
+}
+
+X::X(const std::string& str)
+ : str_(str)
+{
+}
+
+std::string X::str()
+{
+  return str_;
+}
+
+#include &lt;iostream&gt;
+
+int main()
+{
+
+  std::cout &lt;&lt; "\n  Class to be Webified";
+  std::cout &lt;&lt; "\n ----------------------";
+
+  X x("instance of X here");
+  std::cout &lt;&lt; "\n  " &lt;&lt; x.str();
+  std::cout &lt;&lt; "\n\n";
+}
+</pre>
+  </body>
+</html>
