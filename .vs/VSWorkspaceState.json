@@ -1,6 +1,7 @@
 {
   "ExpandedNodes": [
     "",
+<<<<<<< HEAD
     "\\example",
     "\\example\\Cpp11-BlockingQueue",
     "\\example\\Cpp11-BlockingQueue\\Cpp11-BlockingQueue",
@@ -8,5 +9,13 @@
     "\\Project1\\Project1"
   ],
   "SelectedNode": "\\Project1\\Project1\\Source.cpp",
+=======
+    "\\DirectoryNavigator",
+    "\\DirectoryNavigator\\DirExplorer-Naive",
+    "\\Process\\Process",
+    "\\Project1\\Project1"
+  ],
+  "SelectedNode": "\\DirectoryNavigator\\DirectoryNavigator.sln",
+>>>>>>> ec23a42e2941e88806f4fcd6351ac4dc64f383e8
   "PreviewInSolutionExplorer": false
 }
