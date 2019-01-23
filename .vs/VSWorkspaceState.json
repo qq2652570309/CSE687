@@ -1,21 +1,19 @@
 {
   "ExpandedNodes": [
     "",
-<<<<<<< HEAD
-    "\\example",
-    "\\example\\Cpp11-BlockingQueue",
-    "\\example\\Cpp11-BlockingQueue\\Cpp11-BlockingQueue",
-    "\\Project1",
-    "\\Project1\\Project1"
+    "\\Projects",
+    "\\Projects\\Project1",
+    "\\Projects\\Project1HelpS2019",
+    "\\Projects\\Project1HelpS2019\\Process",
+    "\\Projects\\Project1HelpS2019\\Process\\Debug",
+    "\\Projects\\Project1HelpS2019\\Process\\Process",
+    "\\Projects\\Project1HelpS2019\\Process\\Process\\Debug",
+    "\\Projects\\Project1HelpS2019\\Process\\Process\\Debug\\Process.tlog",
+    "\\Projects\\Project1HelpS2019\\Proj1Helper",
+    "\\Projects\\Project1HelpS2019\\Proj1Helper\\OodProject1Helper",
+    "\\Projects\\Project1HelpS2019\\Proj1Helper\\OodProject1Helper\\Debug",
+    "\\Projects\\Project1\\Debug"
   ],
-  "SelectedNode": "\\Project1\\Project1\\Source.cpp",
-=======
-    "\\DirectoryNavigator",
-    "\\DirectoryNavigator\\DirExplorer-Naive",
-    "\\Process\\Process",
-    "\\Project1\\Project1"
-  ],
-  "SelectedNode": "\\DirectoryNavigator\\DirectoryNavigator.sln",
->>>>>>> ec23a42e2941e88806f4fcd6351ac4dc64f383e8
+  "SelectedNode": "\\Projects\\Project1HelpS2019\\Process\\Process.sln",
   "PreviewInSolutionExplorer": false
 }
