@@ -1,19 +1,3 @@
-
-<!Doctype html>
-<html>
-  <head>
-    <style>
-      body {
-        padding:15px 40px;
-        font-family: Consolas;
-        font-size: 1.25em;
-        font-weight: normal;
-      }
-    </style>
-  </head>
-  <body>
-    <h3>Project #1 helper</h3>
-    <pre>
 #pragma once
 /////////////////////////////////////////////////////////////////////
 // Proj1Helper.h  - will become webified                           //
@@ -21,10 +5,9 @@
 // Jim Fawcett, CSE687 - Object Oriented Design, Spring 2019       //
 /////////////////////////////////////////////////////////////////////
 
-#include &lt;string&gt;
+#include <string>
 
-class X 
-{
+class X {
 public:
   X();
   X(const std::string& str);
@@ -32,6 +15,3 @@ public:
 private:
   std::string str_;
 };
-  </pre>
-  </body>
-</html>
