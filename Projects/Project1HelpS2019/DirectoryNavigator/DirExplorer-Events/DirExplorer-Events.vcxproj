@@ -32,7 +32,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{56A60100-70F1-464A-A5ED-5A9BDFCE8BE3}</ProjectGuid>
     <RootNamespace>DirExplorerEvents</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

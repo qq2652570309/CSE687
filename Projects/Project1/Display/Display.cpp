@@ -5,8 +5,8 @@
 #ifdef TEST_TESTPROJECT
 int main()
 {
-	Display player;
-	player.showHtml("../Display/test.html");
+	Display player("c:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+	player.showHtml(" --new-window c:/Users/wbai1/OneDrive/Desktop/CSE687/Projects/Project1/Display/test.html");
 	return 0;
 }
 #endif // TEST_TESTPROJECT

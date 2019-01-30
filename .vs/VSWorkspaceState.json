@@ -4,16 +4,12 @@
     "\\Projects",
     "\\Projects\\Project1",
     "\\Projects\\Project1HelpS2019",
-    "\\Projects\\Project1HelpS2019\\Process",
     "\\Projects\\Project1HelpS2019\\Process\\Debug",
     "\\Projects\\Project1HelpS2019\\Process\\Process",
     "\\Projects\\Project1HelpS2019\\Process\\Process\\Debug",
     "\\Projects\\Project1HelpS2019\\Process\\Process\\Debug\\Process.tlog",
-    "\\Projects\\Project1HelpS2019\\Proj1Helper",
-    "\\Projects\\Project1HelpS2019\\Proj1Helper\\OodProject1Helper",
-    "\\Projects\\Project1HelpS2019\\Proj1Helper\\OodProject1Helper\\Debug",
-    "\\Projects\\Project1\\Debug"
+    "\\Projects\\Project1HelpS2019\\Proj1Helper"
   ],
-  "SelectedNode": "\\Projects\\Project1HelpS2019\\Process\\Process.sln",
+  "SelectedNode": "\\Projects\\Project1\\Project1.sln",
   "PreviewInSolutionExplorer": false
 }

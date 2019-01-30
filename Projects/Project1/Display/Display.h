@@ -1,21 +1,19 @@
 #pragma once
 #include <vector>
 #include <string>
-#include "../Process/Process.h"
+#include "Process.h"
 
 class Display
 {
 public:
-	Display();
+	Display(std::string appPath);
 	~Display() {};
 	void showHtml(std::string file);
 private:
 	Process processor;
 };
 
-Display::Display() {
-	std::string appPath =
-		"c:/Program Files (x86)/Google/Chrome/Application/chrome.exe";
+Display::Display(std::string appPath) {
 	processor.application(appPath);
 }
 
