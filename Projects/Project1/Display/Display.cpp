@@ -6,7 +6,9 @@
 int main()
 {
 	Display player("c:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
-	player.showHtml(" --new-window c:/Users/wbai1/OneDrive/Desktop/CSE687/Projects/Project1/Display/test.html");
+	for (int i = 0; i < 3; i++) {
+		player.showHtml("c:/Users/wentian/Desktop/EDU687/Projects/Project1/convertedPages/Proj1Helper.h.html");
+	}
 	return 0;
 }
 #endif // TEST_TESTPROJECT
