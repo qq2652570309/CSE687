@@ -6,6 +6,7 @@
 
 #include "Display.h"
 
+#ifdef TEST_DISPLAY
 int main()
 {
 	Display player;
@@ -15,4 +16,4 @@ int main()
 	}
 	return 0;
 }
-
+#endif // TEST_DISPLAY

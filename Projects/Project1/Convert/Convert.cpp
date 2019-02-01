@@ -6,8 +6,10 @@
 
 #include "Convert.h"
 
+#ifdef TEST_CONVERT
 int main() 
 {
 	Convert conv;
 	conv.convert2html("../TestFiles/Proj1Helper.h", "../convertedPages/");
 }
+#endif // TEST_CONVERT
