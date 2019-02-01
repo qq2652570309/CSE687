@@ -1,0 +1,14 @@
+C:\Users\wbai1\OneDrive\Desktop\CSE687\Projects\Project1
+true
+true
+true
+false
+FolderSelection
+false
+true
+false
+false
+true
+false
+false
+true
