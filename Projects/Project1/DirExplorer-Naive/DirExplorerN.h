@@ -100,8 +100,9 @@ namespace FileSystem
     size_t dirCount();
     void showStats();
 
-	// get all target files with their paths
-	std::vector<std::string> getTargetFiles();
+	// get target file infomation
+	std::vector<std::string> getFilePath();
+	std::vector<std::string> getFileName();
 
   private:
     std::string path_;
@@ -109,7 +110,8 @@ namespace FileSystem
     size_t dirCount_ = 0;
     size_t fileCount_ = 0;
     bool recurse_ = false;
-	std::vector<std::string> targetFiles;
+	std::vector<std::string> filePaths;
+	std::vector<std::string> fileNames;
   };
 
   //----< construct DirExplorerN instance with default pattern >-----
@@ -156,7 +158,8 @@ namespace FileSystem
       for (auto f : files)
       {
         doFile(f);  // show each file in current directory
-		targetFiles.push_back(fpath + f);
+		filePaths.push_back(fpath + "\\" + f);
+		fileNames.push_back(f);
       }
     }
 
@@ -209,7 +212,12 @@ namespace FileSystem
     std::cout << "\n\n  processed " << fileCount_ << " files in " << dirCount_ << " directories";
   }
 
-  std::vector<std::string> DirExplorerN::getTargetFiles() {
-	  return targetFiles;
+  // return absolute path of target files
+  std::vector<std::string> DirExplorerN::getFilePath() {
+	  return filePaths;
+  }
+  // return absolute target file names
+  std::vector<std::string> DirExplorerN::getFileName() {
+	  return fileNames;
   }
 }

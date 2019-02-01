@@ -1,43 +1,26 @@
+///////////////////////////////////////////////////////////////////////
+// Executive.cpp - class used to execute all operations in project1  //
+// ver 1.0                                                           //
+// Wentian Bai, CSE687 - Object Oriented Design, Spring 2019         //
+///////////////////////////////////////////////////////////////////////
+
 #include <iostream>
 #include "Executive.h"
 
+#ifdef TEST_EXECUTIVE
 int main(int argc, char* argv[])
 {
-	if (argc < 4) {
-		std::cout << "\n error: miss path of loading flies or path of browser\n";
-		return 1;
-	}
+	std::string htmlFolder = "../convertedPages/";
+	Executive exe(argc, argv);
 
-	std::string pattern = argv[1];
-	std::string load_path = argv[2];
-	std::string browser_path = argv[3];
+	exe.convertFiles(htmlFolder);
 
-	// using DirExploreN to find all target files with their paths
-	ProcessCmdLine pcl(argc, argv);
-
-	if (pcl.parseError())
-	{
-		pcl.usage();
-		std::cout << "\n\n";
-		return 1;
-	}
-
-	DirExplorerN de(pcl.path());
-	for (auto patt : pcl.patterns())
-	{
-		de.addPattern(patt);
-	}
-
-	if (pcl.hasOption('s'))
-	{
-		de.recurse();
-	}
-
-	de.search();
-	de.showStats();
-
-	std::vector<std::string> targetFiles = de.getTargetFiles();
-
-    
+	std::cout << "\n  Will start browser to open all html files and each time wait for termination.";
+	std::cout << "\n  You need to kill each window (upper right button) to continue.";
+	std::cout << "\n  Press key to start";
+	getchar();
+	exe.displayHtml(htmlFolder);
+	
 	return 0;
 }
+#endif // TEST_EXECUTIVE

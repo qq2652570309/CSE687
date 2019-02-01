@@ -1,14 +1,18 @@
-// Display.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+///////////////////////////////////////////////////////////////////////
+// Display.cpp - class used to display html in browser               //
+// ver 1.0                                                           //
+// Wentian Bai, CSE687 - Object Oriented Design, Spring 2019         //
+///////////////////////////////////////////////////////////////////////
+
 #include "Display.h"
 
-#ifdef TEST_TESTPROJECT
 int main()
 {
-	Display player("c:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
-	for (int i = 0; i < 3; i++) {
-		player.showHtml("c:/Users/wentian/Desktop/EDU687/Projects/Project1/convertedPages/Proj1Helper.h.html");
+	Display player;
+	player.setBrowser("c:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+	for (int i = 0; i < 2; i++) {
+		player.showHtml(" convertedPages/Proj1Helper.h.html");
 	}
 	return 0;
 }
-#endif // TEST_TESTPROJECT
+

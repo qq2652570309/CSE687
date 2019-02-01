@@ -150,9 +150,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\DirExplorer-Naive\FileSystem.cpp" />
     <ClCompile Include="Executive.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\DirExplorer-Naive\CodeUtilities.h" />
+    <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h" />
+    <ClInclude Include="..\DirExplorer-Naive\FileSystem.h" />
+    <ClInclude Include="..\DirExplorer-Naive\StringUtilities.h" />
     <ClInclude Include="Executive.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
