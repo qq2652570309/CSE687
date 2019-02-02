@@ -10,9 +10,10 @@
 int main()
 {
 	Display player;
-	player.setBrowser("c:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+	//player.setBrowser("c:/Program Files (x86)/Google/Chrome/Application/chrome.exe");
+	player.setBrowser("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
 	for (int i = 0; i < 2; i++) {
-		player.showHtml(" convertedPages/Proj1Helper.h.html");
+		player.showHtml("C:\\Users\\wbai1\\OneDrive\\Desktop\\CSE687\\Projects\\Project1\\TestFiles\\test.html");
 	}
 	return 0;
 }

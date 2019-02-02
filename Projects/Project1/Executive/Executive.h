@@ -33,8 +33,8 @@
 #include "../Convert/Convert.h"
 #include "../Display/Display.h"
 #include "../DirExplorer-Naive/DirExplorerN.h"
-#include "../DirExplorer-Naive/StringUtilities.h"
-#include "../DirExplorer-Naive/CodeUtilities.h"
+#include "../Utilities/StringUtilities/StringUtilities.h"
+#include "../Utilities/CodeUtilities/CodeUtilities.h"
 
 using namespace Utilities;
 using namespace FileSystem;
@@ -54,7 +54,6 @@ public:
 
 private:
 	Convert conv;
-	std::string browser_path;
 	Display display;
 	std::vector<std::string> filePaths;
 	std::vector<std::string> fileNames;
@@ -64,6 +63,8 @@ private:
 Executive::Executive(int argc, char* argv[]) {
 	int status = findFiles(argc, argv);
 	if (status == 1) {
+		std::cout << std::endl << "Press key to exist";
+		getchar();
 		exit(EXIT_FAILURE);
 	}
 }
@@ -71,23 +72,18 @@ Executive::Executive(int argc, char* argv[]) {
 // using DirExploreN to find all target files with their paths
 int Executive::findFiles(int argc, char* argv[]) {
 	if (argc < 4) {
-		std::cout << "\n\n";
-		std::cout << "error: miss arguments from command line\n";
+		std::cout << "\n";
+		std::cout << "error: miss arguments from command line\n\n";
 		return 1;
 	}
-	browser_path = argv[1];
-	char** patterns = new char*[argc - 1];
-	patterns[0] = argv[0];
-	for (int i = 1; i < argc; i++) {
-		patterns[i] = argv[i + 1];
-	}
+	display.setBrowser(argv[1]);
 
-	ProcessCmdLine pcl(argc - 1, patterns);
+	ProcessCmdLine pcl(argc, argv);
 	if (pcl.parseError())
 	{
 		pcl.usage();
-		std::cout << "\n\n";
-		std::cout << "error: cannot parse arguments from command line\n";
+		std::cout << "\n";
+		std::cout << "error: cannot parse arguments from command line\n\n";
 		return 1;
 	}
 
@@ -108,6 +104,12 @@ int Executive::findFiles(int argc, char* argv[]) {
 	filePaths = de.getFilePath();
 	fileNames = de.getFileName();
 
+	if (filePaths.size() < 1 || fileNames.size() < 1) {
+		std::cout << "\n";
+		std::cout << "error: cannot find any files\n\n";
+		return 1;
+	}
+
 	return 0;
 }
 
@@ -122,7 +124,6 @@ void Executive::convertFiles(std::string save_path) {
 
 // Display all .html files
 void Executive::displayHtml(std::string save_path) {
-	display.setBrowser(browser_path);
 	std::string fpath = FileSystem::Path::getFullFileSpec(save_path);
 	for (std::string file : fileNames) {
 		std::string htmlFile = fpath + file + ".html";
