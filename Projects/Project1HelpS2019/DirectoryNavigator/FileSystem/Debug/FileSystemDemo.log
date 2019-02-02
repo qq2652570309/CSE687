@@ -1,4 +1,0 @@
-﻿cl : Command line warning D9035: option 'Gm' has been deprecated and will be removed in a future release
-  FileSystem.cpp
-FileSystem.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
-  FileSystemDemo.vcxproj -> C:\Users\wbai1\OneDrive\Desktop\CSE687\Projects\Project1HelpS2019\DirectoryNavigator\Debug\FileSystemDemo.exe
