@@ -18,7 +18,7 @@
     <ClCompile Include="Executive.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\DirExplorer-Naive\FileSystem.cpp">
+    <ClCompile Include="..\FileSystem\FileSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -26,16 +26,22 @@
     <ClInclude Include="Executive.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\DirExplorer-Naive\CodeUtilities.h">
+    <ClInclude Include="..\FileSystem\FileSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\DirExplorer-Naive\FileSystem.h">
+    <ClInclude Include="..\Utilities\CodeUtilities\CodeUtilities.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\DirExplorer-Naive\StringUtilities.h">
+    <ClInclude Include="..\Utilities\StringUtilities\StringUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Converter\Convert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Display\Display.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

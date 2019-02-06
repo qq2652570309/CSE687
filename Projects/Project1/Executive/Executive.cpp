@@ -15,15 +15,17 @@ int main(int argc, char* argv[])
 		std::string htmlFolder = "../convertedPages/";
 		Executive exe(argc, argv);
 
+		std::cout << "\n\n" << "start Convert:";
 		exe.convertFiles(htmlFolder);
 
-		std::cout << "\n  Will start browser to open all html files and each time wait for termination.";
+		std::cout << "\n\n" << "start Display:\n";
+		std::cout << "\n  Will start browser to open 4 html files and each time wait for termination.";
 		std::cout << "\n  You need to kill each window (upper right button) to continue.";
-		std::cout << "\n  Press key to start";
+		std::cout << "\n  Press key to start\n";
 		getchar();
 		exe.displayHtml(htmlFolder);
 
-		std::cout <<std::endl << "Press key to exist";
+		std::cout <<std::endl << "\n\n Press key to exist";
 		getchar();
 
 		return 0;

@@ -90,6 +90,9 @@ void Convert::convert2html(std::string input, std::string output) {
 		emptyHtml.close();
 		sourceFile.close();
 		htmlFile.close();
+		std::cout << "\n Convert file: " << fName;
+		std::cout << "\n   from: " << input;
+		std::cout << "\n   to:   " << output + fName + ".html";
 	}
 	else {
 		std::cout << "\n error: Unable to open file!!!\n";

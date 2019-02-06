@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{1169E2C4-3673-462D-BBB1-829A275B31A5}</ProjectGuid>
+    <ProjectGuid>{6A9D0B60-2317-4B68-A471-BE920BA115CF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Executive</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
@@ -88,9 +88,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TEST_EXECUTIVE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;TEST_EXECUTIVE;TEST_FILESYSTEM；%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <ExceptionHandling>Async</ExceptionHandling>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -151,14 +152,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\DirExplorer-Naive\FileSystem.cpp" />
+    <ClCompile Include="..\FileSystem\FileSystem.cpp" />
     <ClCompile Include="Executive.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\DirExplorer-Naive\CodeUtilities.h" />
+    <ClInclude Include="..\Converter\Convert.h" />
     <ClInclude Include="..\DirExplorer-Naive\DirExplorerN.h" />
-    <ClInclude Include="..\DirExplorer-Naive\FileSystem.h" />
-    <ClInclude Include="..\DirExplorer-Naive\StringUtilities.h" />
+    <ClInclude Include="..\Display\Display.h" />
+    <ClInclude Include="..\FileSystem\FileSystem.h" />
+    <ClInclude Include="..\Utilities\CodeUtilities\CodeUtilities.h" />
+    <ClInclude Include="..\Utilities\StringUtilities\StringUtilities.h" />
     <ClInclude Include="Executive.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

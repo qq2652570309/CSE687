@@ -11,5 +11,6 @@ int main()
 {
 	Convert conv;
 	conv.convert2html("../TestFiles/Proj1Helper.h", "../convertedPages/");
+	std::cout << "\nfinish!!!\n\n";
 }
 #endif // TEST_CONVERT

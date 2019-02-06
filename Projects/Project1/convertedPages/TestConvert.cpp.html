@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        padding:15px 40px;
+        font-family: Consolas;
+        font-size: 1.25em;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+<h3>Project #1</h3><pre>
+/////////////////////////////////////////////////////////////////////
+// Convert.cpp - Convert input file into html file                 //
+// ver 1.0                                                         //
+// Wentian Bai, CSE687 - Object Oriented Design, Spring 2019       //
+/////////////////////////////////////////////////////////////////////
+
+#include "Convert.h"
+
+#ifdef TEST_CONVERT
+int main() 
+{
+	Convert conv;
+	conv.convert2html("../TestFiles/Proj1Helper.h", "../convertedPages/");
+}
+#endif // TEST_CONVERT
+</pre>
+  </body>
+</html>

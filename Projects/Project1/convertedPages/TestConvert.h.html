@@ -1,0 +1,115 @@
+<!Doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        padding:15px 40px;
+        font-family: Consolas;
+        font-size: 1.25em;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+<h3>Project #1</h3><pre>
+#pragma once
+/////////////////////////////////////////////////////////////////////
+// Convert.h - Convert input file into html file                   //
+// ver 1.0                                                         //
+// Wentian Bai, CSE687 - Object Oriented Design, Spring 2019       //
+/////////////////////////////////////////////////////////////////////
+/*
+ * Package Operations:
+ * -------------------
+ * Convert provides a class, of the same name, whose convert2html function
+ * reads content of input file and insertElem function adds these content
+ * into a html file.
+ *
+ * Required Files:
+ * ---------------
+ * Convert.h, Convert.cpp
+ *
+ * Maintenance History:
+ * --------------------
+ * ver 1.0 : 31 Jan 2019
+ * - first release
+ *
+*/
+
+#include &ltfstream&gt
+#include &ltregex&gt
+#include &ltstring&gt
+#include &ltiostream&gt
+
+class Convert
+{
+public:
+	Convert() {}
+	~Convert() {}
+	void convert2html(std::string input_path, std::string output_path);
+};
+
+// insert &lth3&gt and &ltpre&gt elememt and converting content
+void insertElem(std::ofstream &html, std::ifstream &source) {
+	std::string line;
+
+	html &lt&lt "&lth3&gt";
+	html &lt&lt "Project #1";
+	html &lt&lt "&lt/h3&gt";
+
+	html &lt&lt "&ltpre&gt\n";
+	while (getline(source, line)) {
+		for (char c : line) {
+			switch (c) {
+				case '&lt':
+					html &lt&lt "&lt";
+					break;
+				case '&gt':
+					html &lt&lt "&gt";
+					break;
+				default:
+					html &lt&lt c;
+					break;
+			}
+		}
+		html &lt&lt "\n";
+	}
+	html &lt&lt "&lt/pre&gt\n";
+}
+
+// get file name from full file path
+std::string fileName(std::string filePath) {
+	std::size_t found = filePath.find_last_of("/\\");
+	return filePath.substr(found + 1);
+}
+
+//----&lt convert target file into html file &gt---------------------------
+void Convert::convert2html(std::string input, std::string output) {
+	std::string fName = fileName(input);
+	std::ifstream emptyHtml("../Convert/empty.html");
+	std::ifstream sourceFile(input);
+	std::ofstream htmlFile(output + fName + ".html");
+	std::string line;
+
+	std::regex body_regex("\\s*&ltbody&gt");
+	std::smatch body_match;
+
+	if (emptyHtml.is_open() && sourceFile.is_open()) {
+		while (getline(emptyHtml, line)) {
+			htmlFile &lt&lt line &lt&lt "\n";
+			if (std::regex_match(line, body_match, body_regex)) {
+				insertElem(htmlFile, sourceFile);
+			}
+		}
+		emptyHtml.close();
+		sourceFile.close();
+		htmlFile.close();
+	}
+	else {
+		std::cout &lt&lt "\n error: Unable to open file!!!\n";
+	}
+}
+
+</pre>
+  </body>
+</html>
